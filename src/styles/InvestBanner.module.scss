@@ -1,0 +1,156 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  perspective: 1000px;
+}
+
+/* 👇 wrapper for both tea + coin */
+.visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+}
+
+/* ================== 🍵 TEA ================== */
+
+.tea {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  animation: riseTea 1s ease-out forwards;
+}
+
+/* steam effect using pseudo element */
+.tea::after {
+  content: "";
+  top: -20px;
+  left: 50%;
+  width: 30px;
+  height: 40px;
+  transform: translateX(-50%);
+  background: radial-gradient(
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0)
+  );
+  animation: riseTea 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* ================== 🪙 COIN ================== */
+
+.coin {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  transform-style: preserve-3d;
+  animation: flipCoin 1s ease-in-out;
+  transition: transform 0.3s ease;
+}
+
+.coin:hover {
+  animation-play-state: paused;
+  transform: scale(1.1) rotateY(180deg);
+}
+
+.coinFace {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  border-radius: 50%;
+  backface-visibility: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.coinFront {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/d6/Gold_coin_icon.png");
+}
+
+.coinBack {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/d6/Gold_coin_icon.png");
+  transform: rotateX(180deg);
+}
+
+/* ================== 🔄 TRANSITION ================== */
+
+.show {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+.hide {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+/* ================== 🎯 TEXT ================== */
+
+.bannerText {
+  display: block;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-family: "Outfit", sans-serif;
+}
+
+.goldText {
+  color: #ffd700;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.investBtn {
+  border-radius: 50px;
+  border: 1px solid #4e4cb6;
+  margin-top: 20px;
+  padding: 10px 30px;
+  cursor: pointer;
+  color: #4e4cb6;
+  font-weight: 600;
+  background-color: aliceblue;
+  font-family: "Outfit", sans-serif;
+}
+
+/* ================== 🪙 COIN FLIP ================== */
+
+@keyframes flipCoin {
+  0% {
+    transform: rotateX(0deg) translateY(0px) scale(1);
+  }
+  25% {
+    transform: rotateX(180deg) translateY(-30px) scale(0.9);
+  }
+  50% {
+    transform: rotateX(360deg) translateY(-50px) scale(0.8);
+  }
+  75% {
+    transform: rotateX(540deg) translateY(-30px) scale(0.9);
+  }
+  100% {
+    transform: rotateX(720deg) translateY(0px) scale(1);
+  }
+}
+
+@keyframes riseTea {
+  0% {
+    transform: translateY(80px) scale(0.9);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-10px) scale(1.02); /* slight overshoot */
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap");
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -14,12 +16,13 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  font-family: "Outfit", sans-serif;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Outfit", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -39,4 +42,17 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-slow {
+  animation: rotate 20s linear infinite;
 }

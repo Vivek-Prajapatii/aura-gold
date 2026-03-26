@@ -1,0 +1,80 @@
+.container {
+  background-color: #fff;
+  padding: 30px 0;
+}
+
+.titleBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+
+  .title {
+    align-self: center;
+    align-items: center;
+    padding-left: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #262a92;
+    font-family: "Outfit", sans-serif;
+  }
+
+  .whatsNew {
+    font-size: 12px;
+    color: #e3e3f1;
+    background-color: #4e4cb6;
+    cursor: pointer;
+    border: 0.5px solid #4e4cb6;
+    border-radius: 50px;
+    padding: 7px 15px;
+    margin-right: 15px;
+    font-family: "Outfit", sans-serif;
+  }
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, fit-content(100%));
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  background-color: #fafafa;
+  cursor: pointer;
+  padding: 10px;
+
+  //   &:hover {
+  //     transform: translateY(-4px);
+  //     box-shadow: 0 8px 20px rgba(228, 169, 169, 0.1);
+  //   }
+}
+
+.iconPlaceholder {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+}
+
+.cardTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #262a92;
+  margin: 0 0 5px 0;
+  font-family: "Outfit", sans-serif;
+}
+
+.cardDescription {
+  font-size: 0.875rem;
+  color: #00095aa2;
+  margin: 0;
+  line-height: 1.4;
+  font-family: "Outfit", sans-serif;
+}

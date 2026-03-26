@@ -1,0 +1,50 @@
+.header {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Outfit", sans-serif;
+}
+
+.profile {
+  display: flex;
+  gap: 5px;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+}
+
+.goldCoin {
+  width: 20px;
+  height: 20px;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/d6/Gold_coin_icon.png");
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.price {
+  height: 28px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-right: 10px;
+  color: rgb(243, 233, 233);
+  background-color: #734eda;
+  border: 1px solid #d9eed949;
+  font-size: 12px;
+  padding: 5px 5px;
+  border-radius: 20px;
+}
+
+.notificationIcon {
+  color: white;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
