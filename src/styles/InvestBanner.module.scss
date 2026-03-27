@@ -35,14 +35,11 @@
   width: 30px;
   height: 40px;
   transform: translateX(-50%);
-  background: radial-gradient(
-    rgba(255, 255, 255, 0.6),
-    rgba(255, 255, 255, 0)
-  );
+  background: radial-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
   animation: riseTea 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-/* ================== 🪙 COIN ================== */
+/* ================== COIN ================== */
 
 .coin {
   width: 100px;
@@ -107,6 +104,19 @@
   color: #ffd700;
   font-weight: 700;
   text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+  // display: flex;
+  // align-items: center;
+  gap: 5px;
+}
+
+.goldIcon {
+  position: absolute;
+  font-size: 1.5rem;
+  align-self: center;
+
+  animation:
+    slideSpinIn 2s ease-out forwards,
+    wheelSpin 2s linear 2s 2; /* starts after entry */
 }
 
 .investBtn {
@@ -119,6 +129,53 @@
   font-weight: 600;
   background-color: aliceblue;
   font-family: "Outfit", sans-serif;
+  animation: shakeButton 2s ease-in-out 5s 2;
+}
+
+@keyframes slideSpinIn {
+  0% {
+    opacity: 0;
+    transform: translateX(120px) rotate(0deg) scale(0.7);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateX(-10px) rotate(270deg) scale(1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(360deg) scale(1);
+  }
+}
+
+@keyframes wheelSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shakeButton {
+  0%,
+  90%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: translateX(-2px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(2px);
+  }
 }
 
 /* ================== 🪙 COIN FLIP ================== */

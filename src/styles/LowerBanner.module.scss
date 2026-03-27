@@ -40,6 +40,14 @@
   font-weight: 500;
   font-family: "Outfit", sans-serif;
   width: fit-content;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 1s ease-out;
+}
+
+.knowMore.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .vaultImage {
@@ -56,13 +64,13 @@
     flex-direction: column;
     gap: 20px;
   }
-  
+
   img {
     position: absolute;
     top: -50px;
     right: 0;
   }
-    h4 {
+  h4 {
     font-size: 1rem;
     font-weight: 400;
   }

@@ -27,12 +27,10 @@ const Header = () => {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            overflow: "hidden",
           }}
         >
-          <NotificationsOutlinedIcon
-            fontSize={"small"}
-            sx={{ color: "a785f1" }}
-          />
+          <img src="/icons8-alarm.gif" alt="notification" height="28px" width={"28px"}/>
         </div>
       </div>
     </header>

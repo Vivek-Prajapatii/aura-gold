@@ -9,7 +9,7 @@ const InvestBanner = () => {
   useEffect(() => {
     const interval = setTimeout(() => {
       setShowTea((prev) => !prev);
-    }, 3000); 
+    }, 3000);
 
     return () => clearTimeout(interval);
   }, []);
@@ -18,11 +18,7 @@ const InvestBanner = () => {
     <div className={styles.container}>
       <div className={styles.visual}>
         {showTea ? (
-          <img
-            src="/tea_glass.png"
-            className={styles.tea}
-            alt="tea"
-          />
+          <img src="/tea_glass.png" className={styles.tea} alt="tea" />
         ) : (
           <div className={styles.coin}>
             <div className={`${styles.coinFace} ${styles.coinFront}`}></div>
@@ -31,15 +27,16 @@ const InvestBanner = () => {
         )}
       </div>
 
-      <div className={styles.bannerText}>Buy Gold daily,</div>
+      <div className={styles.bannerText}>Buy Gold daily, at the</div>
       <div className={styles.bannerText}>
-        at price of Tea <span className={styles.goldText}>₹10</span>
+        price of Tea{" "}
+        <span className={`${styles.goldText}`}>₹ 1</span>
+        <span className={styles.goldIcon}>🪙</span>
       </div>
 
       <div className={styles.investBtn}>Buy now</div>
     </div>
   );
 };
-
 
 export default InvestBanner;

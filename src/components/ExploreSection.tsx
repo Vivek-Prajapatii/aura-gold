@@ -10,27 +10,27 @@ const ExploreSection = () => {
     {
       title: "Buy Jewellery",
       description: "Buy jewellery with ease",
-      icons: "/icons8-ring-64.png",
+      icons: "/icons8-starss.gif",
     },
     {
       title: "Coin Delivery",
       description: "Deliver at your Doorstep",
-      icons: "/icons8-truck-94.png",
+      icons: "/icons8-truck.gif",
     },
     {
       title: "Wallet",
       description: "Invest anytime",
-      icons: "/icons8-wallet-64.png",
+      icons: "/icons8-wallet.gif",
     },
     {
       title: "Refer & Earn",
       description: "Share & earn Rewards",
-      icons: "/icons8-gift-100.png",
+      icons: "/icons8-prize.gif",
     },
     {
       title: "FAQ's",
       description: "Quick help",
-      icons: "/icons8-faq-48.png",
+      icons: "/icons8-faq.gif",
     },
   ];
 
